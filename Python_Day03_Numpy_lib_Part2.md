@@ -477,12 +477,12 @@ NumPy的`ndarray`对象提供了一个**`sort()`**的函数，能够对`ndarray`
 
 ### 7.2 常用的`ufunc`函数
 
-| **算数运算** | **add()`、`subtract()`、`multiply()`、`divide()`、`floor_divide()`、`mod()`、`power()** |
+| **算数运算** | **`add()`、`subtract()`、`multiply()`、`divide()`、`floor_divide()`、`mod()`、`power()`** |
 | ------------ | ------------------------------------------------------------ |
-| **绝对值**   | **absolute()`、`fabs()**                                     |
-| **三角函数** | **sin()`、`cos()`、`tan()`、`arcsin()`、`arccos()`、`arctan()** |
-| **指数函数** | **exp()`、`exp2()`、`log()`、`log2()`、`log10()**            |
-| **取整函数** | **ceil()`、`floor()`、`trunc()**                             |
-| **比较函数** | **greater()`、`greater_equal()`、`less()`、`less_equal()`、`equal()`、`not_equal()** |
-| **统计函数** | **sum()`、`mean()`、`std()`、`var()`、`max()`、`min()`、`argmax()`、`argmin()** |
+| **绝对值**   | **`absolute()`、`fabs()`**                                   |
+| **三角函数** | **`sin()`、`cos()`、`tan()`、`arcsin()`、`arccos()`、`arctan()`** |
+| **指数函数** | **`exp()`、`exp2()`、`log()`、`log2()`、`log10()`**          |
+| **取整函数** | **`ceil()`、`floor()`、`trunc()`**                           |
+| **比较函数** | **`greater()`、`greater_equal()`、`less()`、`less_equal()`、`equal()`、`not_equal()`** |
+| **统计函数** | **`sum()`、`mean()`、`std()`、`var()`、`max()`、`min()`、`argmax()`、`argmin()`** |
 
