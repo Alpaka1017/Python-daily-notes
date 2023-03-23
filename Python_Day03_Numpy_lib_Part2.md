@@ -4,13 +4,14 @@ date: 2022-03-21
 css: ...\css\my_md_style.css
 
 <div align = "center">
-    <h1>Python学习日记</h1>
+    <h1>Python学习日记 - Day 03</h1>
 </div>
 <div align = "right">
     <h2><small>科学计算基础NumPy - Part2</small></h2>
 </div>
 
-📘<<[Day 02](.\Python_Day02_Numpy_lib_Part1.md) | [Day 04](.\Python_Day03_Numpy_lib.md)]>> 
+
+📘<<[Day 02](.\Python_Day02_Numpy_lib_Part1.md) | [Day 04](.\Python_Day04_SerialPort.md)]>> 
 
 [W3school帮助手册](https://www.w3school.com.cn/python/numpy_creating_arrays.asp)
 

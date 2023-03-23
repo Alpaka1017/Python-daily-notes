@@ -4,11 +4,13 @@ date: 2022-03-20
 css: ...\css\my_md_style.css
 
 <div align = "center">
-    <h1>Python学习日记</h1>
+    <h1>Python学习日记 - Day - 02</h1>
 </div>
 <div align = "right">
     <h2><small>科学计算基础NumPy - Part1</small></h2>
 </div>
+
+
 
 📘<<[Day 01](.\Python_Day01_Reg_Ex.md) | [Day 03](.\Python_Day03_Numpy_lib_Part2.md)]>> 
 
@@ -587,8 +589,17 @@ print(y.base)
 #### 2.5.1 `for`循环
 
 * 对于一维数组的迭代，`for`循环遍历的是标量
+
 * 对于二维数组的迭代，一个`for`循环遍历的是每行向量（对应的一维数组），要想遍历到标量则需要两个`for`循环
+
 * 对于三位数组的迭代，一个`for`循环遍历每个**2-D**数组，两个`for`循环遍历到单个**1-D**数组（）向量，遍历到标量则需要3个`for`循环
+
+  ```python
+  # 遍历二维数组：不需要通过索引来循环遍历
+  for x in arr:
+    for y in x:
+      print(y)
+  ```
 
 #### 2.5.2 `nditer()`迭代
 

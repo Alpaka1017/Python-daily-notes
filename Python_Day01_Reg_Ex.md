@@ -3,13 +3,11 @@ author: Xueyong Lu
 date: 2022-03-14
 
 <div align = "center">
-    <h1>Python学习日记</h1>
+    <h1>Python学习日记 - Day 01</h1>
 </div>
 <div align = "right">
 	<h2>Regular Expression正则表达式</h2>
 </div>
-
-
 
 
 📘<<[Day 01](.\Python_Day01_Reg_Ex.md) | [Day 02](.\Python_Day02_Numpy_lib.md)]>> 
