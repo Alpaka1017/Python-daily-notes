@@ -11,7 +11,11 @@ css: ...\css\my_md_style.css
 <div align = "right">
     <h2>串口通信</h2>
 </div>
-## 1. 串口通信基础
+
+
+📘<<[Day 03](.\Python_Day03_Numpy_lib_Part2.md) | [Day 05](.\Python_Day05_MagicFunc.md)]>> 
+
+## 1.串口通信基础
 
 ### 1.1 基本概念
 
