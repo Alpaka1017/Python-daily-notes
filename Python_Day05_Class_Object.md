@@ -1,7 +1,4 @@
-title: Python 学习日记 -- 对象和类
-author: Xueyong Lu
-date: 2022-03-24
-css: ...\css\my_md_style.css
+<sub>Title: Python 学习日记 - 对象和类<br>Author:<a href="https://github.com/Alpaka1017?tab=repositories" target="_blank">Xueyong Lu  <i class="fa fa-github" aria-hidden="true"></i></a></br><small>First Edition: March - 2023</small></sub>
 
 <div align = "center">
     <h1>
@@ -14,13 +11,13 @@ css: ...\css\my_md_style.css
 
 
 
-📘<<[Day 04](.\Python_Day04_SerialPort.md) | [Day 06](.\Python_Day06_.md)]>> 
+📘<<[Day 04](.\Python_Day04_SerialPort.md) | [Day 06](.\Python_Day06_Plot.md)]>> 
 
 ## 1. 面向对象
 
 面向对象：按照真实世界的思维方式进行软件系统的构建。
 
-<img src=".\.msc\pics\class_object_discription.png" style="zoom:65%;" />
+<img src=".\.msc\image\class_object_discription.png" style="zoom:65%;" />
 
 ### 1.1 定义类
 
@@ -57,7 +54,7 @@ class Car:
 
 ### 1.3 类的成员
 
- <img src=".\.msc\pics\member_class.png" style="text-align : center; zoom:56%;" />
+ <img src=".\.msc\image\member_class.png" style="text-align : center; zoom:56%;" />
 
 #### 1.3.1 实例变量
 
@@ -251,7 +248,7 @@ class Car:
           return self.__private_examp()
       
   examp = Examp_private(var1 = 1, var2 = 2)
-  print(examp.__private_examp())
+  print(examp.__private_examp())  # AttributeError
   print(examp.desc())
   ```
 
@@ -275,7 +272,7 @@ class Car:
       def get_Private_var(self):
           return self.__var2
       
-      # Defin `set` method
+      # Define `set` method
       def set_Private_var(self, var_extern):
           self.__var2 = var_extern
           
@@ -317,6 +314,212 @@ class Car:
 
   * 装饰器**`@property`**下定义的方法名就是类里的私有变量名，这样即使在外部也能直接通过访问变量本身来调用变量
   * 装饰器**`var2.setter`**定义的方法名也为类里的私有变量名，但是**`.setter`**提供了能直接赋值的方法
+  * 装饰器**`@property`**将一个方法转换为只读属性，可以通过直接调用方法的方式获取属性值
+  * **`@var2.setter`** 装饰器则是用来定义一个与 **`@property` **装饰器配合使用的方法，用来设置属性的值。这样，类的属性就可以通过类的实例直接进行读写操作，而不需要通过调用方法来实现
+  * 通过 **`@property`** 和**`@var2.setter`** 装饰器的组合使用，就可以实现对类属性的封装，同时保证类属性的安全性，让类的使用更加方便和安全。
+    * 装饰器`@`后面的内容是一个函数或方法，用来装饰被修饰的函数或方法
+    * 装饰器本质上是一个Python函数或类，可以通过在函数或类上添加装饰器来扩展或修改函数或类的行为
+    * 当Python解释器遇到一个被装饰的函数或方法时，会自动把它作为参数传递给装饰器，然后将装饰器的返回值作为新的函数或方法返回给调用者。这样就可以在不修改原有函数或方法代码的情况下，增加或修改其功能
 
 ### 1.4 类和对象的性质
+
+#### 1.4.1 封装性
+
+* 封装性是指，将数据和方法包装在类的内部，通过==访问控制==实现对外部的隐藏。这种隐藏机制可以避免外部直接访问和修改类内部的变量和方法，保证了程序的安全性和可维护性
+
+* 具体来说，``Python`中通过将变量和方法定义为公有`（public）``、``私有（private）``和``受保护（protected）``三种访问权限，实现对类和对象的封装
+
+  * **公有变量**和方法可以在类的<u>内部</u>和<u>外部</u>访问
+  * **私有变量**和方法<u>只能在类的内部</u>访问
+  * **受保护变量**和方法可以在<u>类的内部</u>和<u>子类</u>中访问
+
+* 通过封装性，可以隐藏类的内部实现细节，只暴露必要的接口给外部使用，从而提高代码的可维护性和可扩展性。同时，封装也可以保护数据的完整性，防止外部误操作导致的错误和安全问题
+
+  |      类型      |          构造方法          |             内部调用             |             子类调用             |             对象调用             |             外部调用             |
+  | :------------: | :------------------------: | :------------------------------: | :------------------------------: | :------------------------------: | :------------------------------: |
+  |  **公有变量**  | **`self.variable_namer`**  | $\Large \color{green}\checkmark$ | $\Large \color{green}\checkmark$ | $\Large \color{green}\checkmark$ | $\Large \color{green}\checkmark$ |
+  | **受保护变量** | **`self._variable_name`**  | $\Large \color{green}\checkmark$ | $\Large \color{green}\checkmark$ |             &#x274C;             |             &#x274C;             |
+  |  **私有变量**  | **`self.__variable_name`** | $\Large \color{green}\checkmark$ |             &#x274C;             |             &#x274C;             |             &#x274C;             |
+  |   **类变量**   |    **`variable_name`**     | $\Large \color{green}\checkmark$ | $\Large \color{green}\checkmark$ | $\Large \color{green}\checkmark$ | $\Large \color{green}\checkmark$ |
+  | **类私有变量** |   **`___variable_name`**   | $\Large \color{green}\checkmark$ | $\Large \color{green}\checkmark$ |             &#x274C;             |             &#x274C;             |
+
+  <i class="fa fa-exclamation-circle" aria-hidden="true"></i>**注意：**&#x274C;表示不能通过此方法直接调用，但是仍然能够通过**`getter`**、**`setter`**的方法，或者通过装饰器**`@property`**来从外部访问受保护的变量。
+
+#### 1.4.2 继承性
+
+* 继承性是面向对象编程的一个重要的概念和性质
+
+* 通过继承，一个类可以获得另一个类的属性和方法，同时还可以添加自己的属性和方法
+
+* **基类、父类或超类** $\Rightarrow$ **子类或派生类**：
+  * 子类可以==调用==父类中的方法和属性，而无需重新定义 $\rightarrow$ **`super()函数`**
+  * 同时子类还能根据自己的定义==添加==新的属性和方法 $\rightarrow$ **方法重写**
+  * ==覆盖==从父类继承的属性和方法
+  
+* 方法：通过在定义子类时指定其父类来实现
+
+* 特点：
+  * 可以实现代码重用，减少重复编写代码的工作量，同时也可以提高代码的可读性和可维护性
+  * 继承还可以将相似的类组织在一起，形成更清晰的类层次结构
+  
+  ```python
+  import math
+  
+  *new
+  class Example_parent(object):
+      # 初始化类变量
+      def __init__(self, var1, var2):
+          self.var1 = var1
+          self._var2 = var2  # 为使子类能够调用，不能构造为私有变量，而是受保护的变量`_var`
+          return
+  
+      @property
+      def var2(self):
+          return self._var2
+  
+      def log_parent_func(self, var):
+          return math.log((self._var2 + self.var1), var)
+  
+  
+  class Example_child(Example_parent):  # 见上，如果不加括号，则默认继承python的类“object”
+      # 子类中定义有三个变量，其中var1, _var2是通过父类super()函数传入的，所以还需再构造一个var3
+      def __init__(self, var3, **kwargs):
+          # var2为父类中的受保护变量，在这里直接通过变量名var2调用即可，不用_var2
+          super().__init__(**kwargs)
+          self.var3 = var3
+  
+      def exp_child_func(self, var4):
+          # 在子类的实例方法中，由于var2是由父类传递的，所以要声明“受保护变量”
+          return ((self.var1 + self._var2) / self.var3) * math.exp(var4)
+  
+      
+  parent = Example_parent(var1=5, var2=6)
+  log_parent_base = 7
+  print('父类中传入的参数为:{}和{}, 父类中对数运算的底为:{}, 对数计算的结果为:\n{}'.format(parent.var1, parent.var2,                     log_parent_base, parent.log_parent_func(log_parent_base)))
+  child = Example_child(var1=parent.var1, var2=parent.var1, var3=3)
+  exp_child_exponent = 2
+  print(f'子类中传入的参数为:{child.var3}, 子类的运算函数传入指数为:{exp_child_exponent}, 并且继承了父类中的两个参数{parent.var1}和       {parent.var2}, 指数计算的结果是:\n{child.exp_child_func(exp_child_exponent)}')
+     
+  >> 父类中传入的参数为:5和6, 父类中对数运算的底为:7, 对数计算的结果为:
+  >> 1.2322744058673438
+  >> 子类中传入的参数为:3, 子类的运算函数传入指数为:2, 并且继承了父类中的两个参数5和6, 指数计算的结果是:
+  >> 24.6301869964355
+  >> print(child.log_parent_func(6)) --> 2.6233880420442417
+  >> print(parent.log_parent_func(6))--> 2.570194417876938
+  # 从子类中调用父类的log_parent_func()实例方法时，为什么总是会有一点偏差？
+  ```
+  
+  ##### 1.4.2.1 多继承
+  
+  * 在 Python 中，一个子类可以从多个父类继承属性和方法。将多个不同的父类的特性组合成一个子类，实现多种功能
+  
+  * MRO（Method Resolution Order）确定了类实例在调用方法时的顺序，它是一种线性顺序，用于解决当多个父类中有同名方法时的调用顺序
+  
+    ```python
+    class Parent1:
+        def __init__(self, var1):
+            self.var1 = var1
+    
+    class Parent2:
+        def __init__(self, var2):
+            self.var2 = var2
+    
+    class Child(Parent1, Parent2):
+        def __init__(self, var1, var2, var3):
+            # Parent1 和 Parent2 相互独立，需手动调用每个父类的构造函数来初始化它们的实例变量
+            # 在 Child 中没有直接调用 Parent1 和 Parent2 的 __init__() 函数，所以不能使用 super() 函数
+            Parent1.__init__(self, var1)
+            Parent2.__init__(self, var2)
+            self.var3 = var3
+    
+    child = Child(1, 2, 3)
+    print(child.var1, child.var2, child.var3)  # 输出1 2 3
+    ```
+  
+  ##### 1.4.2.2  方法重写
+  
+  * 指在子类中定义与父类中同名的方法，以覆盖父类的方法
+  
+  * 子类重写父类的方法时，必须保持方法名、参数列表和返回值类型相同，在子类实例调用该方法时：**子类 > 父类**
+  
+  * 覆盖：
+  
+    ```python
+    class Parent:
+        def func(self):
+            print("This is Parent's func")
+    
+    class Child(Parent):
+        def func(self):
+            print("This is Child's func")
+    
+    parent = Parent()
+    child = Child()
+    
+    parent.func()  # This is Parent's func
+    child.func()   # This is Child's func
+    ```
+  
+  * 扩展：
+  
+    ```python
+    class Example_Parent_override:
+        def say_hello(self):
+            print("Hello from Parent")
+    
+    class Example_Child_override(Example_Parent_override):
+        def say_hello(self):
+            super().say_hello()   # 调用父类的方法
+            print("Hello from Child")
+    
+    greeting = Example_Child_override()  # 子类声明
+    greeting.say_hello()
+    
+    >> Hello from Parent
+    >> Hello from Child
+    ```
+
+#### 1.4.3 多态性
+
+* 在面向对象编程中，多态性是指==同一个方法名==可以被==不同的对象==所调用，而产生==不同的结果==
+
+* <i class="fa fa-info-circle" aria-hidden="true"></i>在 Python 中，多态性是通过继承和方法重写实现的 
+
+* 当子类重写了父类中的方法，而调用该方法的对象是子类的实例时，就会使用子类中重写的方法，而不是父类中的方法
+
+  ```python
+  class Animal:
+      def make_sound(self):
+          pass
+  
+  class Dog(Animal):
+      def make_sound(self):
+          print("Woof!")
+  
+  class Cat(Animal):
+      def make_sound(self):
+          print("Meow!")
+  
+  class Bird(Animal):
+      def make_sound(self):
+          print("Tweet!")
+  
+  def make_animal_sound(animal):
+      animal.make_sound()
+  
+  dog = Dog()
+  cat = Cat()
+  bird = Bird()
+  
+  make_animal_sound(dog)   # 输出：Woof!
+  make_animal_sound(cat)   # 输出：Meow!
+  make_animal_sound(bird)  # 输出：Tweet!
+  ```
+
+  * 在这个示例中，Animal 是父类，而 Dog、Cat、Bird 是子类。它们都有一个 `make_sound() `方法，但是实现不同。``make_animal_sound() `函数接受一个 Animal 类型的参数，根据传入的对象类型自动选择对应的实现，从而实现多态性。
+  * 实例化子类对象，并作为一个函数传入的参数，函数（父类中定义）在接收这个（相同）的参数后，会逐步从子类中寻找正确的子类实例，并做出响应
+
+
+
+📘<<[Day 04](.\Python_Day04_SerialPort.md) | [Day 06](.\Python_Day06_Plot.md)]>> 
 

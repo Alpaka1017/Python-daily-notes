@@ -1,7 +1,4 @@
-title: Python 学习日记 -- 科学计算基础NumPy - Part1
-author: Xueyong Lu
-date: 2022-03-20
-css: ...\css\my_md_style.css
+<sub>Title: Python 学习日记 -科学计算基础NumPy 01<br>Author:<a href="https://github.com/Alpaka1017?tab=repositories" target="_blank">Xueyong Lu  <i class="fa fa-github" aria-hidden="true"></i></a></br><small>First Edition: March - 2023</small></sub>
 
 <div align = "center">
     <h1>Python学习日记 - Day - 02</h1>
@@ -75,7 +72,7 @@ css: ...\css\my_md_style.css
 
   * 同理，**3-D**数组的元素以**2-D**数组表示为：`np.array([  [ [],[] ],   [ [],[] ]   ])`
 
-    <img src="C:\Users\Xueyong Lu\Desktop\学习\Python\.msc\pics\array_def.png" style="zoom:67%;" />
+    <img src="C:\Users\Xueyong Lu\Desktop\学习\Python\.msc\image\array_def.png" style="zoom:67%;" />
 
 * 检查数组维数：`ndarray.ndim`属性
 
@@ -129,7 +126,7 @@ css: ...\css\my_md_style.css
 
   *在本例数组中：最里面的维度（第 5 个 dim）有 4 个元素，第 4 个 dim 有 1 个元素为向量，第 3 个 dim 具有 1 个元素是与向量的矩阵，第 2 个 dim 有 1 个元素是 3D 数组，而第 1 个 dim 有 1 个元素，该元素是 4D 数组*
 
-  <img src=".\.msc\pics\array_def_multi.png" style="zoom:50%;" />
+  <img src=".\.msc\image\array_def_multi.png" style="zoom:50%;" />
 
 * 补充：3维，多维数组的应用
 
@@ -652,7 +649,7 @@ print(y.base)
   >> 7
   ```
 
-  <img src=".\.msc\pics\nditer_var_step.png" style="zoom: 67%;" />
+  <img src=".\.msc\image\nditer_var_step.png" style="zoom: 67%;" />
 
 * **`ndenumerate() `枚举迭代**
 

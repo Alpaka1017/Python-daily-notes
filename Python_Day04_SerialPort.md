@@ -1,7 +1,4 @@
-title: Python 学习日记 -- 串口通信
-author: Xueyong Lu
-date: 2022-03-22
-css: ...\css\my_md_style.css
+<sub>Title: Python 学习日记 - 串口通信<br>Author:<a href="https://github.com/Alpaka1017?tab=repositories" target="_blank">Xueyong Lu  <i class="fa fa-github" aria-hidden="true"></i></a></br><small>First Edition: March - 2023</small></sub>
 
 <div align = "center">
     <h1>
@@ -32,7 +29,7 @@ css: ...\css\my_md_style.css
   * 0校验（space）：校验位总是为“0”
   * 1校验（mark）：校验位总是为“1”
 
-  <img src=".\.msc\pics\serial_communication.png" style="zoom:67%;" />
+  <img src=".\.msc\image\serial_communication.png" style="zoom:67%;" />
 
 * **波特率的计算**
 
@@ -188,14 +185,14 @@ ser.parity=serial.PARITY_ODD			  #奇校验
 
   | 样式                                                         | 参数                                                         |
   | ------------------------------------------------------------ | ------------------------------------------------------------ |
-  | <img src=".\.msc\pics\ultra_const_rate.png" alt="ultra_const_rate" style="zoom:67%;" /> | **$·$** 方向<br />**$·$**  速率                              |
-  | <img src=".\.msc\pics\ultra_ramp.png" alt="ultra_ramp" style="zoom:67%;" /> | **$·$** 方向<br />**$·$**  开始和结束的速率<br />**$·$**  目标时长 |
-  | <img src=".\.msc\pics\ultra_stepped.png" alt="ultra_stepped" style="zoom:67%;" /> | **$·$**  方向<br />**$·$**  开始和结束的速率<br />**$·$**  时长和步长 |
-  | <img src=".\.msc\pics\ultra_pulse.png" alt="ultra_pulse" style="zoom:67%;" /> | **$·$**  方向<br />**$·$**  速率R1和R2<br />**$·$**  Volumen V1和V2/ 时长T1和T2<br />**$·$**  脉冲个数 |
-  | <img src=".\.msc\pics\ultra_bolus.png" alt="ultra_bolus" style="zoom:67%;" /> | **$·$**  目标体积<br />**$·$**  目标时间                     |
-  | <img src=".\.msc\pics\ultra_concentration.png" alt="ultra_concentration" style="zoom:67%;" /> | **$·$**  体重<br />**$·$**  注射速率和Concentration [mg/ml或%]<br />**$·$**  剂量[mg/kg]或者时长<br />**$·$**  Doses + time lag |
-  | <img src=".\.msc\pics\ultra_gradient.png" alt="ultra_gradient" style="zoom:67%;" /> |                                                              |
-  | <img src=".\.msc\pics\ultra_autofill.png" alt="ultra_autofill" style="zoom:67%;" /> |                                                              |
-  | <img src=".\.msc\pics\ultra_advanced_opts.png" alt="ultra_advanced_opts" style="zoom:67%;" /> |                                                              |
+  | <img src=".\.msc\image\ultra_const_rate.png" alt="ultra_const_rate" style="zoom:67%;" /> | **$·$** 方向<br />**$·$**  速率                              |
+  | <img src=".\.msc\image\ultra_ramp.png" alt="ultra_ramp" style="zoom:67%;" /> | **$·$** 方向<br />**$·$**  开始和结束的速率<br />**$·$**  目标时长 |
+  | <img src=".\.msc\image\ultra_stepped.png" alt="ultra_stepped" style="zoom:67%;" /> | **$·$**  方向<br />**$·$**  开始和结束的速率<br />**$·$**  时长和步长 |
+  | <img src=".\.msc\image\ultra_pulse.png" alt="ultra_pulse" style="zoom:67%;" /> | **$·$**  方向<br />**$·$**  速率R1和R2<br />**$·$**  Volumen V1和V2/ 时长T1和T2<br />**$·$**  脉冲个数 |
+  | <img src=".\.msc\image\ultra_bolus.png" alt="ultra_bolus" style="zoom:67%;" /> | **$·$**  目标体积<br />**$·$**  目标时间                     |
+  | <img src=".\.msc\image\ultra_concentration.png" alt="ultra_concentration" style="zoom:67%;" /> | **$·$**  体重<br />**$·$**  注射速率和Concentration [mg/ml或%]<br />**$·$**  剂量[mg/kg]或者时长<br />**$·$**  Doses + time lag |
+  | <img src=".\.msc\image\ultra_gradient.png" alt="ultra_gradient" style="zoom:67%;" /> |                                                              |
+  | <img src=".\.msc\image\ultra_autofill.png" alt="ultra_autofill" style="zoom:67%;" /> |                                                              |
+  | <img src=".\.msc\image\ultra_advanced_opts.png" alt="ultra_advanced_opts" style="zoom:67%;" /> |                                                              |
   
   

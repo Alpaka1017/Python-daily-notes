@@ -1,6 +1,4 @@
-title: Python 学习日记 -- 正则表达式 Regular Expression
-author: Xueyong Lu
-date: 2022-03-14
+<sub>Title: Python 学习日记 - 正则表达<br>Author:<a href="https://github.com/Alpaka1017?tab=repositories" target="_blank">Xueyong Lu  <i class="fa fa-github" aria-hidden="true"></i></a></br><small>First Edition: March - 2023</small></sub>
 
 <div align = "center">
     <h1>Python学习日记 - Day 01</h1>

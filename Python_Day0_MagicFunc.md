@@ -1,7 +1,4 @@
-title: Python 学习日记 -- 串口通信
-author: Xueyong Lu
-date: 2022-03-22
-css: ...\css\my_md_style.css
+<sub>Title: Python 学习日记 - 魔法函数<br>Author:<a href="https://github.com/Alpaka1017?tab=repositories" target="_blank">Xueyong Lu  <i class="fa fa-github" aria-hidden="true"></i></a></br><small>First Edition: March - 2023</small></sub>
 
 <div align = "center">
     <h1>
@@ -27,5 +24,5 @@ css: ...\css\my_md_style.css
 
 * 常见的魔法函数可按照如下分类
 
-  <img src=".\.msc\pics\Python魔法函数.png" style="zoom:40%;" />
+  <img src=".\.msc\image\Python魔法函数.png" style="zoom:40%;" />
 

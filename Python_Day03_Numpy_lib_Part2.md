@@ -1,7 +1,4 @@
-title: Python 学习日记 -- 科学计算基础NumPy - Part2
-author: Xueyong Lu
-date: 2022-03-21
-css: ...\css\my_md_style.css
+<sub>Title: Python 学习日记 - 科学计算基础NumPy 02<br>Author:<a href="https://github.com/Alpaka1017?tab=repositories" target="_blank">Xueyong Lu  <i class="fa fa-github" aria-hidden="true"></i></a></br><small>First Edition: March - 2023</small></sub>
 
 <div align = "center">
     <h1>Python学习日记 - Day 03</h1>
@@ -43,7 +40,7 @@ css: ...\css\my_md_style.css
       [7 8]]
   ```
 
-  <img src=".\.msc\pics\array_concatenate.png" style="zoom:60%;" />
+  <img src=".\.msc\image\array_concatenate.png" style="zoom:60%;" />
 
 ### 1.2 数组堆栈操作
 
