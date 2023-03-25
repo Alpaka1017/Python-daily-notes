@@ -10,7 +10,7 @@
 </div>
 
 
-📘<<[Day 04](.\Python_Day04_SerialPort.md) | [Day 06](.\Python_Day05_MagicFunc.md)]>> 
+📘<<[Day 04](./Python_Day04_SerialPort.md) | [Day 06](./Python_Day05_MagicFunc.md)]>> 
 
 ## 1. 介绍
 
@@ -24,5 +24,5 @@
 
 * 常见的魔法函数可按照如下分类
 
-  <img src=".\.msc\image\Python魔法函数.png" style="zoom:40%;" />
+  <img src="./.msc/image/Python魔法函数.png" style="zoom:40%;" />
 

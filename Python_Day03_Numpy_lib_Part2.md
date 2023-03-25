@@ -8,7 +8,7 @@
 </div>
 
 
-📘<<[Day 02](.\Python_Day02_Numpy_lib_Part1.md) | [Day 04](.\Python_Day04_SerialPort.md)]>> 
+📘<<[Day 02](./Python_Day02_Numpy_lib_Part1.md) | [Day 04](./Python_Day04_SerialPort.md)]>> 
 
 [W3school帮助手册](https://www.w3school.com.cn/python/numpy_creating_arrays.asp)
 
@@ -40,7 +40,7 @@
       [7 8]]
   ```
 
-  <img src=".\.msc\image\array_concatenate.png" style="zoom:60%;" />
+  <img src="./.msc/image/array_concatenate.png" style="zoom:60%;" />
 
 ### 1.2 数组堆栈操作
 
@@ -171,7 +171,7 @@
   
   newarr = np.array_split(arr, 3) # 将2-D arr数组拆分为三个2-D数组
   for subarr in newarr:
-      print(f'Subarray:\n {subarr}')
+      print(f'Subarray:/n {subarr}')
   
   print(newarr)
   
@@ -226,7 +226,7 @@
   arr_search = np.where(arr == 4)
   
   # arr_search为元组对象，arr_search[0]为返回的索引列表（类型为np.ndarray），arr_search[0][2]可以访问第3个索引对象
-  print(f'返回索引：{arr_search}\n数据类型为：{type(arr_search)}\n索引数组{arr_search[0]}的类型为：{type(arr_search[0])}\n其中第3个满足搜索的索引值为：{arr_search[0][2]}')
+  print(f'返回索引：{arr_search}/n数据类型为：{type(arr_search)}/n索引数组{arr_search[0]}的类型为：{type(arr_search[0])}/n其中第3个满足搜索的索引值为：{arr_search[0][2]}')
   
   >> 返回索引：(array([3, 5, 6], dtype=int64),)
   >> 数据类型为：<class 'tuple'>
@@ -252,7 +252,7 @@
 
   <i class = "fa fa-exclamation" aria-hidden="true"></i> **注意**：
 
-  * **`searchsorted()`**在**左$\rightarrow$右**时返回==第一个大于或等于==要查找的值的元素的索引，**左$\leftarrow$右**时返回==第一个小于或等于==要查找的值的元素的索引
+  * **`searchsorted()`**在**左$/rightarrow$右**时返回==第一个大于或等于==要查找的值的元素的索引，**左$/leftarrow$右**时返回==第一个小于或等于==要查找的值的元素的索引
   * **`searchsorted()`**函数在使用时默认数组是按照==升序==排序的，否则会造成不准确
 
 * **搜索多个值**
@@ -291,7 +291,7 @@ NumPy的`ndarray`对象提供了一个**`sort()`**的函数，能够对`ndarray`
   >> ['apple' 'banana' 'cherry']
   ```
 
-* **布尔类型** (0 $\rightarrow$ 1)
+* **布尔类型** (0 $/rightarrow$ 1)
 
 * **2-D数组**
 

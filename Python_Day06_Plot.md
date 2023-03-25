@@ -12,4 +12,4 @@
 
 
 
-📘<<[Day 04](.\Python_Day04_SerialPort.md) | [Day 06](.\Python_Day06_.md)]>> 
+📘<<[Day 04](./Python_Day04_SerialPort.md) | [Day 06](./Python_Day06_.md)]>> 

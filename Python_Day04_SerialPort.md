@@ -10,7 +10,7 @@
 </div>
 
 
-📘<<[Day 03](.\Python_Day03_Numpy_lib_Part2.md) | [Day 05](.\Python_Day05_MagicFunc.md)]>> 
+📘<<[Day 03](./Python_Day03_Numpy_lib_Part2.md) | [Day 05](./Python_Day05_MagicFunc.md)]>> 
 
 ## 1.串口通信基础
 
@@ -29,7 +29,7 @@
   * 0校验（space）：校验位总是为“0”
   * 1校验（mark）：校验位总是为“1”
 
-  <img src=".\.msc\image\serial_communication.png" style="zoom:67%;" />
+  <img src="./.msc/image/serial_communication.png" style="zoom:67%;" />
 
 * **波特率的计算**
 
@@ -45,7 +45,7 @@
 
   * **R232 (bps)：**9600bps的波特率、8位数据位、1个校验位和1位停止位
 
-    $传信率 = \dfrac{9600bps}{8+1+1} = 960 bits/s$
+    $传信率 = /dfrac{9600bps}{8+1+1} = 960 bits/s$
 
   * **USB：**取决于USB版本（最大传输速率）、数据包长度、数据重传次数、总线带宽等
 
@@ -110,11 +110,11 @@ ser.parity=serial.PARITY_ODD			  #奇校验
 * `ser.write()`用以上位机向串口设备发送指令
 
   ```python
-  command = b'add. 6\r\n'
+  command = b'add. 6/r/n'
   ser.write(command_add)
   
   # 如果发送的指令为一字符串，则要注意在发送时的编码问题，因为串口只能接收`bytes`类型的字符
-  command = 'add. 6\r\n'
+  command = 'add. 6/r/n'
   ser.write(command.encode())
   # 编码的方式有`utf-8`、`ascii`、`unicode`等
   ```
@@ -136,12 +136,12 @@ ser.parity=serial.PARITY_ODD			  #奇校验
 * **`ser.readline()`**: 提供了从串口每次接收**一行数据**的方法
 
   ```python
-  # 这个方法可以读取一行数据，即遇到 换行符\n 或者 回车符\r 就停止读取，并返回读取到的数据
+  # 这个方法可以读取一行数据，即遇到 换行符/n 或者 回车符/r 就停止读取，并返回读取到的数据
   # 返回值是一个字节数组
   # 打开串口时应该指定超时，否则如果串口没有收到新行，则会一直等待。如果没有超时，readline会报异常
   # 读取多行返回数据时：
   response = ser.readline()
-  while response.endswith(b'\r\n'):
+  while response.endswith(b'/r/n'):
       response += ser.readline()3
       
   print(response.decode('utf-8'))
@@ -171,8 +171,8 @@ ser.parity=serial.PARITY_ODD			  #奇校验
 * **PHD-Ultra series**返回的响应格式为：
 
   ```python
-  b'\n09:Command error: \r\n'
-  # 即末尾以'\r\n‘结尾
+  b'/n09:Command error: /r/n'
+  # 即末尾以'/r/n‘结尾
   ```
 
 ### 3. PHD-Ultra Series
@@ -185,14 +185,14 @@ ser.parity=serial.PARITY_ODD			  #奇校验
 
   | 样式                                                         | 参数                                                         |
   | ------------------------------------------------------------ | ------------------------------------------------------------ |
-  | <img src=".\.msc\image\ultra_const_rate.png" alt="ultra_const_rate" style="zoom:67%;" /> | **$·$** 方向<br />**$·$**  速率                              |
-  | <img src=".\.msc\image\ultra_ramp.png" alt="ultra_ramp" style="zoom:67%;" /> | **$·$** 方向<br />**$·$**  开始和结束的速率<br />**$·$**  目标时长 |
-  | <img src=".\.msc\image\ultra_stepped.png" alt="ultra_stepped" style="zoom:67%;" /> | **$·$**  方向<br />**$·$**  开始和结束的速率<br />**$·$**  时长和步长 |
-  | <img src=".\.msc\image\ultra_pulse.png" alt="ultra_pulse" style="zoom:67%;" /> | **$·$**  方向<br />**$·$**  速率R1和R2<br />**$·$**  Volumen V1和V2/ 时长T1和T2<br />**$·$**  脉冲个数 |
-  | <img src=".\.msc\image\ultra_bolus.png" alt="ultra_bolus" style="zoom:67%;" /> | **$·$**  目标体积<br />**$·$**  目标时间                     |
-  | <img src=".\.msc\image\ultra_concentration.png" alt="ultra_concentration" style="zoom:67%;" /> | **$·$**  体重<br />**$·$**  注射速率和Concentration [mg/ml或%]<br />**$·$**  剂量[mg/kg]或者时长<br />**$·$**  Doses + time lag |
-  | <img src=".\.msc\image\ultra_gradient.png" alt="ultra_gradient" style="zoom:67%;" /> |                                                              |
-  | <img src=".\.msc\image\ultra_autofill.png" alt="ultra_autofill" style="zoom:67%;" /> |                                                              |
-  | <img src=".\.msc\image\ultra_advanced_opts.png" alt="ultra_advanced_opts" style="zoom:67%;" /> |                                                              |
+  | <img src="./.msc/image/ultra_const_rate.png" alt="ultra_const_rate" style="zoom:67%;" /> | **$·$** 方向<br />**$·$**  速率                              |
+  | <img src="./.msc/image/ultra_ramp.png" alt="ultra_ramp" style="zoom:67%;" /> | **$·$** 方向<br />**$·$**  开始和结束的速率<br />**$·$**  目标时长 |
+  | <img src="./.msc/image/ultra_stepped.png" alt="ultra_stepped" style="zoom:67%;" /> | **$·$**  方向<br />**$·$**  开始和结束的速率<br />**$·$**  时长和步长 |
+  | <img src="./.msc/image/ultra_pulse.png" alt="ultra_pulse" style="zoom:67%;" /> | **$·$**  方向<br />**$·$**  速率R1和R2<br />**$·$**  Volumen V1和V2/ 时长T1和T2<br />**$·$**  脉冲个数 |
+  | <img src="./.msc/image/ultra_bolus.png" alt="ultra_bolus" style="zoom:67%;" /> | **$·$**  目标体积<br />**$·$**  目标时间                     |
+  | <img src="./.msc/image/ultra_concentration.png" alt="ultra_concentration" style="zoom:67%;" /> | **$·$**  体重<br />**$·$**  注射速率和Concentration [mg/ml或%]<br />**$·$**  剂量[mg/kg]或者时长<br />**$·$**  Doses + time lag |
+  | <img src="./.msc/image/ultra_gradient.png" alt="ultra_gradient" style="zoom:67%;" /> |                                                              |
+  | <img src="./.msc/image/ultra_autofill.png" alt="ultra_autofill" style="zoom:67%;" /> |                                                              |
+  | <img src="./.msc/image/ultra_advanced_opts.png" alt="ultra_advanced_opts" style="zoom:67%;" /> |                                                              |
   
   

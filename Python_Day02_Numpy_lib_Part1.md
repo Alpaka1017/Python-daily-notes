@@ -9,7 +9,7 @@
 
 
 
-📘<<[Day 01](.\Python_Day01_Reg_Ex.md) | [Day 03](.\Python_Day03_Numpy_lib_Part2.md)]>> 
+📘<<[Day 01](./Python_Day01_Reg_Ex.md) | [Day 03](./Python_Day03_Numpy_lib_Part2.md)]>> 
 
 [W3school帮助手册](https://www.w3school.com.cn/python/numpy_creating_arrays.asp)
 
@@ -72,7 +72,7 @@
 
   * 同理，**3-D**数组的元素以**2-D**数组表示为：`np.array([  [ [],[] ],   [ [],[] ]   ])`
 
-    <img src="C:\Users\Xueyong Lu\Desktop\学习\Python\.msc\image\array_def.png" style="zoom:67%;" />
+    <img src="C:/Users/Xueyong Lu/Desktop/学习/Python/.msc/image/array_def.png" style="zoom:67%;" />
 
 * 检查数组维数：`ndarray.ndim`属性
 
@@ -126,7 +126,7 @@
 
   *在本例数组中：最里面的维度（第 5 个 dim）有 4 个元素，第 4 个 dim 有 1 个元素为向量，第 3 个 dim 具有 1 个元素是与向量的矩阵，第 2 个 dim 有 1 个元素是 3D 数组，而第 1 个 dim 有 1 个元素，该元素是 4D 数组*
 
-  <img src=".\.msc\image\array_def_multi.png" style="zoom:50%;" />
+  <img src="./.msc/image/array_def_multi.png" style="zoom:50%;" />
 
 * 补充：3维，多维数组的应用
 
@@ -207,7 +207,7 @@ NumPy 数组中的索引以==0==开头（区别于Matlab的==1==），这意味�
     >> [1 2 3 4]
     ```
 
-      *切片操作返回的结果**包括开始索引**，但**不包括结束索引 $\Rightarrow$ 实际位置 [start+1, end]**。*
+      *切片操作返回的结果**包括开始索引**，但**不包括结束索引 $/Rightarrow$ 实际位置 [start+1, end]**。*
 
   * **负向切片**
 
@@ -519,7 +519,7 @@ print(y.base)
   # 将数组逆时针旋转90度
   arr_rotated = np.rot90(arr)
   
-  print("rotated array:\n", arr_rotated)
+  print("rotated array:/n", arr_rotated)
   
   >> [[3 6 9]
       [2 5 8]
@@ -536,7 +536,7 @@ print(y.base)
   arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
   # 沿着第二个轴翻转数组,垂直方向第2个轴
   arr_flipped_axis = np.flip(arr, axis=1)
-  print("flipped axis array:\n", arr_flipped_axis)
+  print("flipped axis array:/n", arr_flipped_axis)
   
   >>  [ [3 2 1]
    	  [6 5 4]
@@ -553,7 +553,7 @@ print(y.base)
   arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
   # 沿着垂直方向翻转数组
   arr_flipped_ud = np.flipud(arr)
-  print("flipped ud array:\n", arr_flipped_ud)
+  print("flipped ud array:/n", arr_flipped_ud)
   
   >> [ [7 8 9]
      	 [4 5 6]
@@ -570,7 +570,7 @@ print(y.base)
   arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
   # 沿着水平方向翻转数组，翻转轴为垂直
   arr_flipped_lr = np.fliplr(arr)
-  print("flipped lr array:\n", arr_flipped_lr)
+  print("flipped lr array:/n", arr_flipped_lr)
   
   >> [ [3 2 1]
        [6 5 4]
@@ -649,7 +649,7 @@ print(y.base)
   >> 7
   ```
 
-  <img src=".\.msc\image\nditer_var_step.png" style="zoom: 67%;" />
+  <img src="./.msc/image/nditer_var_step.png" style="zoom: 67%;" />
 
 * **`ndenumerate() `枚举迭代**
 
@@ -690,5 +690,5 @@ print(y.base)
 
 
 
-📘<<[Day 01](.\Python_Day01_Reg_Ex.md) | [Day 03](.\Python_Day03_Numpy_lib_Part2.md)]>> 
+📘<<[Day 01](./Python_Day01_Reg_Ex.md) | [Day 03](./Python_Day03_Numpy_lib_Part2.md)]>> 
 

@@ -8,7 +8,7 @@
 </div>
 
 
-📘<<[Day 01](.\Python_Day01_Reg_Ex.md) | [Day 02](.\Python_Day02_Numpy_lib.md)]>> 
+📘<<[Day 01](./Python_Day01_Reg_Ex.md) | [Day 02](./Python_Day02_Numpy_lib.md)]>> 
 
 正则表达的作用是***处理文本、提取期望的信息***，在其他的很多语言中也是类似的表达，而不只是Python。当然也可以用在Python中提供了很多种字符串对象的内置处理方法，如**.split()**、**.find()**、**.index()**等。
 
@@ -62,14 +62,14 @@ for line in lines:
 
 ```python
 import re
-p = re.compile(r'([\d.]+万/每{0,1}月)') # r'([\d.]+万/每?月)'
+p = re.compile(r'([/d.]+万/每{0,1}月)') # r'([/d.]+万/每?月)'
 for one in p.findall(content):
     print(one)
 ```
 
 其中，`.../每{0,1}月`也可以写为`.../每?月`。
 
-*`re.compile(r'_')`*函数的参数就是正则表达式的字符串。上面的例子指定的搜索子串的特征为 <font color = Blue> `([\d.]+万/每{0,1}月) `</font>，该函数会返回一个*compile*对象，*compile*对象的*`.findall`*方法返回**所有返回的子串**，并放在一个**列表**里。
+*`re.compile(r'_')`*函数的参数就是正则表达式的字符串。上面的例子指定的搜索子串的特征为 <font color = Blue> `([/d.]+万/每{0,1}月) `</font>，该函数会返回一个*compile*对象，*compile*对象的*`.findall`*方法返回**所有返回的子串**，并放在一个**列表**里。
 
 正则表达式验证工具：[RegEx验证](https://regex101.com)
 
@@ -77,7 +77,7 @@ for one in p.findall(content):
 
 正则表达式中包含两种字符，一种是直接进行相同匹配的字符**普通字符**；一种是特殊的字符，也被成为**元字符（metacharacters）**，如:
 
-` . * + ? \ [ ] ^ $ {} | () `
+` . * + ? / [ ] ^ $ {} | () `
 
 ### 1.2.1 <a id = "RegEx_dot">任意字符`.`</a>
 
@@ -171,7 +171,7 @@ for one in p.findall(content):
 > > 如从以上文本中提取电话号码信息：
 > >
 > > ```python
-> > info_match = re.compile(r'(\d{3}.\d{4}.\d{4})')
+> > info_match = re.compile(r'(/d{3}./d{4}./d{4})')
 > > for number in info_match.findall(text):
 > >     print(number)
 > > ```
@@ -240,7 +240,7 @@ source = '<html><head><title>Title</title>'
 > > 提取上面文本中所有在`.`之前的字符
 > >
 > > ```python
-> > extract_info = re.compile(r'(.*\.)')
+> > extract_info = re.compile(r'(.*/.)')
 > >  for element in extract_info.findall(text):
 > >      print(element)
 > > ```
@@ -259,18 +259,18 @@ source = '<html><head><title>Title</title>'
 
 | 转义表示 |    等同表达     | 描述                                 | 补充                                                         |
 | :------: | :-------------: | :----------------------------------- | ------------------------------------------------------------ |
-|   `\d`   |     `[0-9]`     | 任意==数字字符==                     |                                                              |
-|   `\D`   |    `[^0-9]`     | 任意==非数字==字符                   |                                                              |
-|   `\s`   | `[\t\n\r\f\v]`  | 任意==空白==字符: 空格、Tab、换行等  |                                                              |
-|   `\S`   | `[^\t\n\r\f\v]` | 任意==非空白==字符                   |                                                              |
-|   `\w`   |  `[a-zA-Z0-9]`  | 任意==文字字符==：字母、数字、下划线 | `re.compile(r'(\w{2,4})',re.A)` 参数`re.A`表示匹配的是**ASCII**码字符 |
-|   `\W`   | `[^a-zA-Z0-9]`  | 任意==非文字==字符                   |                                                              |
+|   `/d`   |     `[0-9]`     | 任意==数字字符==                     |                                                              |
+|   `/D`   |    `[^0-9]`     | 任意==非数字==字符                   |                                                              |
+|   `/s`   | `[/t/n/r/f/v]`  | 任意==空白==字符: 空格、Tab、换行等  |                                                              |
+|   `/S`   | `[^/t/n/r/f/v]` | 任意==非空白==字符                   |                                                              |
+|   `/w`   |  `[a-zA-Z0-9]`  | 任意==文字字符==：字母、数字、下划线 | `re.compile(r'(/w{2,4})',re.A)` 参数`re.A`表示匹配的是**ASCII**码字符 |
+|   `/W`   | `[^a-zA-Z0-9]`  | 任意==非文字==字符                   |                                                              |
 
 转义匹配的不同`re.`方法见下表：
 
 | Flag                       | 含义                                                    |
 | -------------------------- | ------------------------------------------------------- |
-| ASCII, A                   | 使个别转义匹配`\w, \b, \s, \d`只对**ASCII**字符进行匹配 |
+| ASCII, A                   | 使个别转义匹配`/w, /b, /s, /d`只对**ASCII**字符进行匹配 |
 | DOTALL, S                  | 使`.`匹配**任意字符**，包括换行                         |
 | IGNOREXCASE, I             | **大小写**不敏感**case-insensitive**匹配                |
 | LOCALE, L                  | **local-aware**匹配                                     |
@@ -296,7 +296,7 @@ source = '<html><head><title>Title</title>'
 > > > ```python
 > > > def RegEx_square_brackets():
 > > >     import re
-> > >     Number_match = re.compile(r'(1[3-8]\d.\d{4}.\d{4})')
+> > >     Number_match = re.compile(r'(1[3-8]/d./d{4}./d{4})')
 > > >     for number in Number_match.findall(text):
 > > >         print(number)
 > > > ```
@@ -330,9 +330,9 @@ source = '<html><head><title>Title</title>'
 > > > import re
 > > >     strin = 's4d3a5sd4+da.546s87@%#Ad%645'
 > > >     # 提取上述字符串中的数字
-> > >     numbers = re.compile(r'([\d])')
+> > >     numbers = re.compile(r'([/d])')
 > > >     # 提取上述字符串中的非数字
-> > >     non_numbers = re.compile(r'([^\d])')
+> > >     non_numbers = re.compile(r'([^/d])')
 > > >     # 提取上述字符串中的字母
 > > >     char_match = re.compile(r'([a-zA-Z])')
 > > >     # 提取上述字符串中的特殊字符
@@ -365,7 +365,7 @@ source = '<html><head><title>Title</title>'
 > > 获取每一类水果的标号：
 > >
 > > ```python
-> > start_tags = re.compile(r'(^\d+)')
+> > start_tags = re.compile(r'(^/d+)')
 > >     for tag in start_tags.findall(text):
 > >         print(tag)
 > > ```
@@ -375,13 +375,13 @@ source = '<html><head><title>Title</title>'
 > > 要分别输出每一行的标签，需要用到多行模式`re.M`
 >
 > ```示例
-> text = '''001-苹果价格-10\n002-橙子价格-12\n003-香蕉价格-16'''
+> text = '''001-苹果价格-10/n002-橙子价格-12/n003-香蕉价格-16'''
 > ```
 >
 > > 上述方法适用于在前面`def`了新的函数，造成`text`的异常缩进，因为多行模式并不能处理缩进。
 > >
 > > ```python
-> > start_tags = re.compile(r'^\d+', re.M)
+> > start_tags = re.compile(r'^/d+', re.M)
 > >     for tag in start_tags.findall(text):
 > >         print(tag)
 > > ```
@@ -399,7 +399,7 @@ source = '<html><head><title>Title</title>'
 > 上例获取价格：
 >
 > ```python
-> end_price = re.compile(r'(\d+$)', re.M)
+> end_price = re.compile(r'(/d+$)', re.M)
 > for price in end_price.findall(text):
 >     print(price)
 > ```
@@ -428,7 +428,7 @@ source = '<html><head><title>Title</title>'
 > >
 > > ```python
 > > import re
-> > text = '''苹果，苹果是绿色的\n橙子，橙子是橙色的\n香蕉，香蕉是黄色的'''
+> > text = '''苹果，苹果是绿色的/n橙子，橙子是橙色的/n香蕉，香蕉是黄色的'''
 > > fruits_match = re.compile(r'(.*)，')
 > > for fruit in fruits_match.findall(text):
 > >     print(fruit)
@@ -469,12 +469,12 @@ source = '<html><head><title>Title</title>'
 > 提取下面字符串中的名字：
 >
 > ```py
-> text = '''关羽；张飞，赵云、马超,黄忠，   马岱\n  魏延，严颜'''
+> text = '''关羽；张飞，赵云、马超,黄忠，   马岱/n  魏延，严颜'''
 > ```
 >
 > > ```python
 > > import re
-> >     nameList = re.split(r'[；，、,\s]\s*', text)
+> >     nameList = re.split(r'[；，、,/s]/s*', text)
 > >     print(nameList)
 > > ```
 > >
@@ -484,7 +484,7 @@ source = '<html><head><title>Title</title>'
 > > ['关羽', '张飞', '赵云', '马超', '黄忠', '马岱', '魏延', '严颜']
 > > ```
 > >
-> > 上面正则表达式`r'[；，、,\s]\s*'`表示：首先对`[...]`中的符号进行匹配切割，然后加上后面的`\s`任意个空白字符（空格、换行、Tab等）。
+> > 上面正则表达式`r'[；，、,/s]/s*'`表示：首先对`[...]`中的符号进行匹配切割，然后加上后面的`/s`任意个空白字符（空格、换行、Tab等）。
 
 ### 1.3.2 Sub替换
 
@@ -518,10 +518,10 @@ source = '<html><head><title>Title</title>'
 >     这节讲的是切割磁力线
 >     '''
 >     
->     print_str = re.compile(r'av(\d*)/')  # r'/av(\d+?)/'
+>     print_str = re.compile(r'av(/d*)/')  # r'/av(/d+?)/'
 >     print(print_str.findall(links))
 >     
->     newStr = re.sub(r'av(\d*)', RegEx_subFunc, links)
+>     newStr = re.sub(r'av(/d*)', RegEx_subFunc, links)
 >     print(newStr)
 > ```
 >
@@ -549,4 +549,4 @@ source = '<html><head><title>Title</title>'
 
 
 
-📘<<[Day 01](.\Python_Day01_Reg_Ex.md) | [Day 02](.\Python_Day02_Numpy_lib.md)]>> 
+📘<<[Day 01](./Python_Day01_Reg_Ex.md) | [Day 02](./Python_Day02_Numpy_lib.md)]>> 

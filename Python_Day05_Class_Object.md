@@ -11,13 +11,13 @@
 
 
 
-📘<<[Day 04](.\Python_Day04_SerialPort.md) | [Day 06](.\Python_Day06_Plot.md)]>> 
+📘<<[Day 04](./Python_Day04_SerialPort.md) | [Day 06](./Python_Day06_Plot.md)]>> 
 
 ## 1. 面向对象
 
 面向对象：按照真实世界的思维方式进行软件系统的构建。
 
-<img src=".\.msc\image\class_object_discription.png" style="zoom:65%;" />
+<img src="./.msc/image/class_object_discription.png" style="zoom:65%;" />
 
 ### 1.1 定义类
 
@@ -54,7 +54,7 @@ class Car:
 
 ### 1.3 类的成员
 
- <img src=".\.msc\image\member_class.png" style="text-align : center; zoom:56%;" />
+ <img src="./.msc/image/member_class.png" style="text-align : center; zoom:56%;" />
 
 #### 1.3.1 实例变量
 
@@ -337,11 +337,11 @@ class Car:
 
   |      类型      |          构造方法          |             内部调用             |             子类调用             |             对象调用             |             外部调用             |
   | :------------: | :------------------------: | :------------------------------: | :------------------------------: | :------------------------------: | :------------------------------: |
-  |  **公有变量**  | **`self.variable_namer`**  | $\Large \color{green}\checkmark$ | $\Large \color{green}\checkmark$ | $\Large \color{green}\checkmark$ | $\Large \color{green}\checkmark$ |
-  | **受保护变量** | **`self._variable_name`**  | $\Large \color{green}\checkmark$ | $\Large \color{green}\checkmark$ |             &#x274C;             |             &#x274C;             |
-  |  **私有变量**  | **`self.__variable_name`** | $\Large \color{green}\checkmark$ |             &#x274C;             |             &#x274C;             |             &#x274C;             |
-  |   **类变量**   |    **`variable_name`**     | $\Large \color{green}\checkmark$ | $\Large \color{green}\checkmark$ | $\Large \color{green}\checkmark$ | $\Large \color{green}\checkmark$ |
-  | **类私有变量** |   **`___variable_name`**   | $\Large \color{green}\checkmark$ | $\Large \color{green}\checkmark$ |             &#x274C;             |             &#x274C;             |
+  |  **公有变量**  | **`self.variable_namer`**  | $/Large /color{green}/checkmark$ | $/Large /color{green}/checkmark$ | $/Large /color{green}/checkmark$ | $/Large /color{green}/checkmark$ |
+  | **受保护变量** | **`self._variable_name`**  | $/Large /color{green}/checkmark$ | $/Large /color{green}/checkmark$ |             &#x274C;             |             &#x274C;             |
+  |  **私有变量**  | **`self.__variable_name`** | $/Large /color{green}/checkmark$ |             &#x274C;             |             &#x274C;             |             &#x274C;             |
+  |   **类变量**   |    **`variable_name`**     | $/Large /color{green}/checkmark$ | $/Large /color{green}/checkmark$ | $/Large /color{green}/checkmark$ | $/Large /color{green}/checkmark$ |
+  | **类私有变量** |   **`___variable_name`**   | $/Large /color{green}/checkmark$ | $/Large /color{green}/checkmark$ |             &#x274C;             |             &#x274C;             |
 
   <i class="fa fa-exclamation-circle" aria-hidden="true"></i>**注意：**&#x274C;表示不能通过此方法直接调用，但是仍然能够通过**`getter`**、**`setter`**的方法，或者通过装饰器**`@property`**来从外部访问受保护的变量。
 
@@ -351,9 +351,9 @@ class Car:
 
 * 通过继承，一个类可以获得另一个类的属性和方法，同时还可以添加自己的属性和方法
 
-* **基类、父类或超类** $\Rightarrow$ **子类或派生类**：
-  * 子类可以==调用==父类中的方法和属性，而无需重新定义 $\rightarrow$ **`super()函数`**
-  * 同时子类还能根据自己的定义==添加==新的属性和方法 $\rightarrow$ **方法重写**
+* **基类、父类或超类** $/Rightarrow$ **子类或派生类**：
+  * 子类可以==调用==父类中的方法和属性，而无需重新定义 $/rightarrow$ **`super()函数`**
+  * 同时子类还能根据自己的定义==添加==新的属性和方法 $/rightarrow$ **方法重写**
   * ==覆盖==从父类继承的属性和方法
   
 * 方法：通过在定义子类时指定其父类来实现
@@ -395,10 +395,10 @@ class Car:
       
   parent = Example_parent(var1=5, var2=6)
   log_parent_base = 7
-  print('父类中传入的参数为:{}和{}, 父类中对数运算的底为:{}, 对数计算的结果为:\n{}'.format(parent.var1, parent.var2,                     log_parent_base, parent.log_parent_func(log_parent_base)))
+  print('父类中传入的参数为:{}和{}, 父类中对数运算的底为:{}, 对数计算的结果为:/n{}'.format(parent.var1, parent.var2,                     log_parent_base, parent.log_parent_func(log_parent_base)))
   child = Example_child(var1=parent.var1, var2=parent.var1, var3=3)
   exp_child_exponent = 2
-  print(f'子类中传入的参数为:{child.var3}, 子类的运算函数传入指数为:{exp_child_exponent}, 并且继承了父类中的两个参数{parent.var1}和       {parent.var2}, 指数计算的结果是:\n{child.exp_child_func(exp_child_exponent)}')
+  print(f'子类中传入的参数为:{child.var3}, 子类的运算函数传入指数为:{exp_child_exponent}, 并且继承了父类中的两个参数{parent.var1}和       {parent.var2}, 指数计算的结果是:/n{child.exp_child_func(exp_child_exponent)}')
      
   >> 父类中传入的参数为:5和6, 父类中对数运算的底为:7, 对数计算的结果为:
   >> 1.2322744058673438
@@ -521,5 +521,5 @@ class Car:
 
 
 
-📘<<[Day 04](.\Python_Day04_SerialPort.md) | [Day 06](.\Python_Day06_Plot.md)]>> 
+📘<<[Day 04](./Python_Day04_SerialPort.md) | [Day 06](./Python_Day06_Plot.md)]>> 
 
