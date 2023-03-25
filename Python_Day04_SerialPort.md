@@ -10,7 +10,7 @@
 </div>
 
 
-📘<<[Day 03](./Python_Day03_Numpy_lib_Part2.md) | [Day 05](./Python_Day05_MagicFunc.md)]>> 
+📘<<[Day 03](./Python_Day03_Numpy_lib_Part2.md) | [Day 05](./Python_Day05_Class_Object.md)]>> 
 
 ## 1.串口通信基础
 
@@ -196,3 +196,6 @@ ser.parity=serial.PARITY_ODD			  #奇校验
   | <img src="./.msc/image/ultra_advanced_opts.png" alt="ultra_advanced_opts" style="zoom:67%;" /> |                                                              |
   
   
+
+📘<<[Day 03](./Python_Day03_Numpy_lib_Part2.md) | [Day 05](./Python_Day05_Class_Object.md)]>> 
+

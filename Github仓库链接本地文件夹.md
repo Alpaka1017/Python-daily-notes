@@ -152,3 +152,36 @@ date: 2022-03-22
 | `git diff`        | 用于比较不同版本之间的差异                                   |
 | `git stash`       | 用于将当前修改暂存起来，便于之后恢复或者应用                 |
 
+## 5. 常见问题及解决
+
+* `Updating the Git index failed.  A rescan will be automatically started to resynchronize git-gui.`
+
+* 这种情况通常发生在使用 Git GUI 进行操作时，由于 Git index 状态与 Git 仓库的状态不一致导致的
+
+* 解决办法：
+
+  1. 关闭 Git GUI，确保没有其他程序正在访问 Git 仓库
+
+  2. 打开终端或命令提示符，进入 Git 仓库所在的目录
+
+  3. 运行以下命令以清除 Git index：
+
+     ```bash
+     git rm --cached -r .
+     ```
+
+     * 清除文件索引，而不会清除文件本身
+
+  4. 运行以下命令以重新添加所有文件和子目录：
+
+     ```bash
+     git add .
+     ```
+
+  5. 运行以下命令以提交更改：
+
+     ```bash
+     git commit -m "Resynchronize Git index"
+     ```
+
+  6. 重新启动 Git GUI，并尝试再次进行操作

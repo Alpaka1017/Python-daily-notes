@@ -484,3 +484,6 @@ NumPy的`ndarray`对象提供了一个**`sort()`**的函数，能够对`ndarray`
 | **比较函数** | **`greater()`、`greater_equal()`、`less()`、`less_equal()`、`equal()`、`not_equal()`** |
 | **统计函数** | **`sum()`、`mean()`、`std()`、`var()`、`max()`、`min()`、`argmax()`、`argmin()`** |
 
+
+
+📘<<[Day 02](./Python_Day02_Numpy_lib_Part1.md) | [Day 04](./Python_Day04_SerialPort.md)]>> 

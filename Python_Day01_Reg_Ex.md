@@ -8,7 +8,7 @@
 </div>
 
 
-📘<<[Day 01](./Python_Day01_Reg_Ex.md) | [Day 02](./Python_Day02_Numpy_lib.md)]>> 
+📘<<[Day 01](./Python_Day01_Reg_Ex.md) | [Day 02](./Python_Day02_Numpy_lib_Part1.md)]>> 
 
 正则表达的作用是***处理文本、提取期望的信息***，在其他的很多语言中也是类似的表达，而不只是Python。当然也可以用在Python中提供了很多种字符串对象的内置处理方法，如**.split()**、**.find()**、**.index()**等。
 
@@ -549,4 +549,4 @@ source = '<html><head><title>Title</title>'
 
 
 
-📘<<[Day 01](./Python_Day01_Reg_Ex.md) | [Day 02](./Python_Day02_Numpy_lib.md)]>> 
+📘<<[Day 01](./Python_Day01_Reg_Ex.md) | [Day 02](./Python_Day02_Numpy_lib_Part1.md)]>> 
