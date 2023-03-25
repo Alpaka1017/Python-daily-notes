@@ -335,14 +335,16 @@ class Car:
 
 * 通过封装性，可以隐藏类的内部实现细节，只暴露必要的接口给外部使用，从而提高代码的可维护性和可扩展性。同时，封装也可以保护数据的完整性，防止外部误操作导致的错误和安全问题
 
-  |      类型      |          构造方法          |             内部调用             |             子类调用             |             对象调用             |             外部调用             |
-  | :------------: | :------------------------: | :------------------------------: | :------------------------------: | :------------------------------: | :------------------------------: |
-  |  **公有变量**  | **`self.variable_namer`**  | $/Large /color{green}/checkmark$ | $/Large /color{green}/checkmark$ | $/Large /color{green}/checkmark$ | $/Large /color{green}/checkmark$ |
-  | **受保护变量** | **`self._variable_name`**  | $/Large /color{green}/checkmark$ | $/Large /color{green}/checkmark$ |             &#x274C;             |             &#x274C;             |
-  |  **私有变量**  | **`self.__variable_name`** | $/Large /color{green}/checkmark$ |             &#x274C;             |             &#x274C;             |             &#x274C;             |
-  |   **类变量**   |    **`variable_name`**     | $/Large /color{green}/checkmark$ | $/Large /color{green}/checkmark$ | $/Large /color{green}/checkmark$ | $/Large /color{green}/checkmark$ |
-  | **类私有变量** |   **`___variable_name`**   | $/Large /color{green}/checkmark$ | $/Large /color{green}/checkmark$ |             &#x274C;             |             &#x274C;             |
-
+  
+  
+  |      类型      |          构造方法          | 内部调用 | 子类调用 | 对象调用 | 外部调用 |
+  | :------------: | :------------------------: | :------: | :------: | :------: | :------: |
+  |  **公有变量**  | **`self.variable_namer`**  | &#x2705; | &#x2705; | &#x2705; | &#x2705; |
+  | **受保护变量** | **`self._variable_name`**  | &#x2705; | &#x2705; | &#x274C; | &#x274C; |
+  |  **私有变量**  | **`self.__variable_name`** | &#x2705; | &#x274C; | &#x274C; | &#x274C; |
+  |   **类变量**   |    **`variable_name`**     | &#x2705; | &#x2705; | &#x2705; | &#x2705; |
+  | **类私有变量** |   **`___variable_name`**   | &#x2705; | &#x2705; | &#x274C; | &#x274C; |
+  
   <i class="fa fa-exclamation-circle" aria-hidden="true"></i>**注意：**&#x274C;表示不能通过此方法直接调用，但是仍然能够通过**`getter`**、**`setter`**的方法，或者通过装饰器**`@property`**来从外部访问受保护的变量。
 
 #### 1.4.2 继承性
@@ -352,6 +354,7 @@ class Car:
 * 通过继承，一个类可以获得另一个类的属性和方法，同时还可以添加自己的属性和方法
 
 * **基类、父类或超类** $/Rightarrow$ **子类或派生类**：
+  
   * 子类可以==调用==父类中的方法和属性，而无需重新定义 $/rightarrow$ **`super()函数`**
   * 同时子类还能根据自己的定义==添加==新的属性和方法 $/rightarrow$ **方法重写**
   * ==覆盖==从父类继承的属性和方法
