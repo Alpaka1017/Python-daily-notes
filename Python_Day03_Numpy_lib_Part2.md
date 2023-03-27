@@ -18,7 +18,7 @@
 
 * NumPy提供了一个**`concatenate()`**函数用以连接数组。**`concatenate()`**函数允许用户以关键字**`axis`**来指定要连接数组的轴
 
-* <i class = "fa fa-exclamation" aria-hidden="true"></i> **注意**：**`axis`**缺省状态下，默认为**`axis = 0`**
+* ℹ **注意**：**`axis`**缺省状态下，默认为**`axis = 0`**
 
   ```python
   arr1 = np.array([[1, 2], [3, 4]])
@@ -66,7 +66,7 @@
       [3 6]]
   ```
 
-  <i class = "fa fa-exclamation" aria-hidden="true"></i> **注意**：**`np.stack(var1, var2)`**函数能接收两个args，**var1**为要连接的数组，以**Tuple (arr1, arr2, ...)**的形式，**var2**参数为连接的轴
+  ℹ**注意**：**`np.stack(var1, var2)`**函数能接收两个args，**var1**为要连接的数组，以**Tuple (arr1, arr2, ...)**的形式，**var2**参数为连接的轴
 
 * 除了在**`np.stack()`**中指定关键字`axis`，也可以用NumPy提供的三个辅助函数进行不同维度的堆栈：
 
@@ -159,7 +159,7 @@
   >> 4
   ```
 
-  <i class = "fa fa-exclamation" aria-hidden="true"></i>**注意**：
+  ℹ**注意**：
 
   * **`array_split`**函数返回一个由子数组构成的列表
   * 如果要拆分的子数组个数与原来数组的元素个数比匹配，则会从末尾进行相应的调整
@@ -209,7 +209,7 @@
   print(newarr_hsplit)
   ```
 
-  <i class = "fa fa-exclamation" aria-hidden="true"></i>**注意** ：
+  ℹ**注意** ：
 
   * 在拆分操作中，NumPy也提供了类似于数组堆栈中的**`hstack(), vstack(), dstack()`**函数
   * 使用**`dsplit()`**要求待分割的数组为3维
@@ -250,7 +250,7 @@
   >> 2 # 从右往左，第索引3处插入"7.5"，以使该值不再小于下一个值
   ```
 
-  <i class = "fa fa-exclamation" aria-hidden="true"></i> **注意**：
+  ℹ**注意**：
 
   * **`searchsorted()`**在**左$/rightarrow$右**时返回==第一个大于或等于==要查找的值的元素的索引，**左$/leftarrow$右**时返回==第一个小于或等于==要查找的值的元素的索引
   * **`searchsorted()`**函数在使用时默认数组是按照==升序==排序的，否则会造成不准确
@@ -305,7 +305,7 @@ NumPy的`ndarray`对象提供了一个**`sort()`**的函数，能够对`ndarray`
       [7, 8, 9]]
   ```
 
-  <i class = "fa fa-exclamation" aria-hidden="true"></i> **注意：**`np.sort()`函数对二维数组的排序原则：
+  ℹ**注意：**`np.sort()`函数对二维数组的排序原则：
 
   * 默认情况下按照`axis=1`（列）进行排序，即不改变向量的顺序，而是对每个向量的元素进行升序排序
   * 可以通过指定要排序的轴`axis=0`进行排序，即对按照每个向量的首元素对向量进行排序，如下所示：
@@ -442,7 +442,7 @@ NumPy的`ndarray`对象提供了一个**`sort()`**的函数，能够对`ndarray`
   x = random.choice([3, 5, 7, 9], size=(3, 5))
   ```
 
-  <i class = "fa fa-exclamation" aria-hidden="true"></i>**注意**：指定了形状之后，元素可重复出现
+  ℹ**注意**：指定了形状之后，元素可重复出现
 
 ## 7. ufuncs
 

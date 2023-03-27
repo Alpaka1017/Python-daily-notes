@@ -684,9 +684,26 @@ print(y.base)
     >> (1, 3) 8
     ```
 
-    * 注意<i class = "fa fa-exclamation" aria-hidden="true"></i> ：
+    * 注意ℹ：
       * 枚举方法打印的索引是以元组的形式储存的
       * 如果不遍历索引`idx`，那么输出的是一整个元组，即**`((idx1, idx2), element)`**的形式（对于二维数组）
+
+## #. 补充
+
+**找出两个数中绝对值较小的一个，并返回这个数**：
+
+* (元组)[列表] --> (数值)[布尔值]: abs(y)<abs(x)则返回y，否则返回x
+    * 处理二元值的时候很简洁 
+    
+        ```python
+        result = (x, y)[abs(y)<abs(x)]
+        ```
+* 匿名函数
+
+    ```python
+    result = (lambda a, b: a if abs(a) < abs(b) else b)(x, y)
+    # lamda匿名函数：var = (lambda 形参1,形参2: 形参1 if ... else 形参2)(实参1, 实参2)
+    ```
 
 
 
