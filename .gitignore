@@ -1,6 +1,10 @@
 Python基础/
 Plot_zhao/
 .idea/
-Pandas案例.pdf/
+Pandas案例.pdf
 TyporaTheme/
-/Projects/
+Projects/
+*.html
+desktop.ini
+aaa.pptx
+
