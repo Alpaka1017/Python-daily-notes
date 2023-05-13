@@ -1,0 +1,9 @@
+C:/Users/Xueyong Lu/Desktop/GiveMeStupidity/Python/Projects/PyQT_project/first_test/build-QTwidgetsAPP-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/CMakeFiles/QTwidgetsAPP.dir
+C:/Users/Xueyong Lu/Desktop/GiveMeStupidity/Python/Projects/PyQT_project/first_test/build-QTwidgetsAPP-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+C:/Users/Xueyong Lu/Desktop/GiveMeStupidity/Python/Projects/PyQT_project/first_test/build-QTwidgetsAPP-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Xueyong Lu/Desktop/GiveMeStupidity/Python/Projects/PyQT_project/first_test/build-QTwidgetsAPP-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
+C:/Users/Xueyong Lu/Desktop/GiveMeStupidity/Python/Projects/PyQT_project/first_test/build-QTwidgetsAPP-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/CMakeFiles/install.dir
+C:/Users/Xueyong Lu/Desktop/GiveMeStupidity/Python/Projects/PyQT_project/first_test/build-QTwidgetsAPP-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
+C:/Users/Xueyong Lu/Desktop/GiveMeStupidity/Python/Projects/PyQT_project/first_test/build-QTwidgetsAPP-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
+C:/Users/Xueyong Lu/Desktop/GiveMeStupidity/Python/Projects/PyQT_project/first_test/build-QTwidgetsAPP-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/CMakeFiles/QTwidgetsAPP_autogen_timestamp_deps.dir
+C:/Users/Xueyong Lu/Desktop/GiveMeStupidity/Python/Projects/PyQT_project/first_test/build-QTwidgetsAPP-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/CMakeFiles/QTwidgetsAPP_autogen.dir

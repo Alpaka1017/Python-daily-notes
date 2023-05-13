@@ -221,3 +221,6 @@ if __name__ == '__main__':
     # result = (x, y)[abs(y) < abs(x)]
     result = (lambda a, b: a if abs(a) < abs(b) else b)(y, x)
     print(f'The smallest absolute value of {x} and {y} is {result}, which is {smallest_abs}')
+
+
+print(range(2*3))

@@ -1,0 +1,12 @@
+# ninja log v5
+3	86	0	C:/Users/Xueyong Lu/Desktop/GiveMeStupidity/Python/Projects/PyQT_project/first_test/build-QTwidgetsAPP-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	c81a847fe0491029
+2	1217	7018607423820320	QTwidgetsAPP_autogen/timestamp	a9e2b497b03f3c39
+2	1217	7018607423820320	QTwidgetsAPP_autogen/mocs_compilation.cpp	a9e2b497b03f3c39
+2	1217	7018607423820320	C:/Users/Xueyong Lu/Desktop/GiveMeStupidity/Python/Projects/PyQT_project/first_test/build-QTwidgetsAPP-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/QTwidgetsAPP_autogen/timestamp	a9e2b497b03f3c39
+2	1217	7018607423820320	C:/Users/Xueyong Lu/Desktop/GiveMeStupidity/Python/Projects/PyQT_project/first_test/build-QTwidgetsAPP-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/QTwidgetsAPP_autogen/mocs_compilation.cpp	a9e2b497b03f3c39
+1218	3408	7018607449660313	CMakeFiles/QTwidgetsAPP.dir/QTwidgetsAPP_autogen/mocs_compilation.cpp.obj	70e84c9177b253ec
+1229	3473	7018607450310280	CMakeFiles/QTwidgetsAPP.dir/main.cpp.obj	70dc6b183546739d
+1240	3568	7018607451260286	CMakeFiles/QTwidgetsAPP.dir/mainwindow.cpp.obj	987936bd33617a83
+3568	3844	7018607453950288	QTwidgetsAPP.exe	1d2f4ace5a5efd4
+2	79	0	C:/Users/Xueyong Lu/Desktop/GiveMeStupidity/Python/Projects/PyQT_project/first_test/build-QTwidgetsAPP-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	c81a847fe0491029
+2	75	0	C:/Users/Xueyong Lu/Desktop/GiveMeStupidity/Python/Projects/PyQT_project/first_test/build-QTwidgetsAPP-Desktop_Qt_6_4_3_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	c81a847fe0491029
